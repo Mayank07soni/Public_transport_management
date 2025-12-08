@@ -1,15 +1,12 @@
 import React, { useState } from 'react'
 import TrainCards from '../components/TrainCards';
+import Header from '../components/header';
 
 const TrainPage = () => {
     const[berth,setBerth]=useState("");
   return (
     <div>
-
-     <div style={{backgroundColor:"grey",padding:"10px"}}>Navbar</div>
-
-    
-       
+      <Header/>
      <div style={{fontSize:"30px",display:"flex",justifyContent:"center"}}>Train Complaint Registration</div>
      <h3>Report Issues instantly</h3>
 

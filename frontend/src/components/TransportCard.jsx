@@ -11,7 +11,7 @@ const TransportCard = () => {
     <div style={{justifyContent:"space-evenly",gap:'10px', flexWrap: "wrap",display:"flex"}}>
     {data.map((item,index)=>(
         <div key={index} style={{position:"relative",  cursor: "pointer",overflow: "hidden",}}>
-        <img src={item.imag} alt={item.name} />
+        <img src={item.imag} alt={item.name} style={{borderTopLeftRadius:"0.75rem",borderTopRightRadius:"0.75rem"}}/>
         <div  style={{
               position: "absolute",
               bottom: 0,
