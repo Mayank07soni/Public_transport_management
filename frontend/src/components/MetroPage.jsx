@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import TrainCards from './TrainCards';
+import MetroCards from './MetroCard';
 
-const TrainPage = () => {
-    const[berth,setBerth]=useState("");
+const BusPage= () => {
+    const[MetroLine, setMetroLine]=useState("");
   return (
     <div>
 
@@ -10,49 +10,52 @@ const TrainPage = () => {
 
     
        
-     <div style={{fontSize:"30px",display:"flex",justifyContent:"center"}}>Train Complaint Registration</div>
+     <div style={{fontSize:"30px",display:"flex",justifyContent:"center"}}>Metro Complaint Registration</div>
      <h3>Report Issues instantly</h3>
 
+     <h4>Metro Details</h4>
      <div style={{display:"flex",justifyContent:"space-evenly",borderColor:"black",border:"solid 1px",padding:"10px", borderRadius:'5px'}}>
+      
         <div style={{margin:"1px"}}>  
-        <h3>Train Number</h3> 
-        <input type="text" placeholder=""/>
+        <input type="text" placeholder="Type of Line"/>
         </div>
         <div>  
-        <h3>Date of Complain</h3> 
-        <input type="text" placeholder=""/>
+     
+        <input type="text" placeholder="From"/>
         </div>
-     </div>
-   
-    <div style={{display:"flex",justifyContent:"space-evenly",borderColor:"black",border:"solid 1px",padding:"10px", borderRadius:'5px',marginTop:"5px"}}>
-        <div style={{margin:"1px"}}>  
-      <label>Coach No.</label> <br/>
-        <input type="text" placeholder=""/>
-        </div>
-        <div>  
-        <label>Seat No.</label> <br/>
-        <input type="text" placeholder=""/>
-
-        </div>
-           <div>  
+         <div>  
         
-          <div>
-          <label>Berth Type: </label><br />
-          <select value={berth} onChange={(e) => setBerth(e.target.value)}>
-            <option value="">Select</option>
-            <option>Lower Berth</option>
-            <option>Middle Berth</option>
-            <option>Upper Berth</option>
-            <option>Side Lower</option>
-            <option>Side Upper</option>
-          </select>
+        <input type="text" placeholder="To"/>
         </div>
+         <div>  
+        <label>Date </label>  <br/>
+        <input type="date" placeholder="01-01-2025"/>
+        </div>
+        <div>  
+        <label>Time </label>  <br/>
+        <input type="time" placeholder="00:00 "/>
+        </div>
+        
+     </div>
+   <h4>Coach / Platform Details</h4>
+    <div style={{display:"flex",justifyContent:"space-evenly",borderColor:"black",border:"solid 1px",padding:"10px", borderRadius:'5px',marginTop:"5px"}}>
+       <div>  
+        <label>Coach No.</label> <br/>
+        <input type="text" placeholder=""/>
+        </div>
+    <div style={{margin:"1px"}}>  
+      <label>Gate NO.</label> <br/>
+      <input type="number" placeholder=""/>
+        </div>
+        <div>  
+        <label>Platform No.</label> <br/>
+        <input type="text" placeholder=""/>
         </div>
      </div>
 
      <div>
         <h2>Select your issue :</h2>
-        <TrainCards/>
+        <MetroCards/>
      </div>
 
      <div style={{padding:"10px"}}>
@@ -62,7 +65,7 @@ const TrainPage = () => {
       <h3>Complain Description</h3>
       <textarea placeholder="Describe your Complaint...." rows={4} style={{width:"98%",margin:'10px'}}/>
      </div>
- <div>
+  <div>
     <input type="tel" placeholder="Enter the Number"/>
     <input type="email" placeholder="Enter the Email"/>
   </div>
@@ -74,4 +77,4 @@ const TrainPage = () => {
   )
 }
 
-export default TrainPage
+export default BusPage

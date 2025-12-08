@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import TrainCards from './TrainCards';
+import FlightCards from './BusCards';
 
-const TrainPage = () => {
+const BusPage= () => {
     const[berth,setBerth]=useState("");
   return (
     <div>
@@ -10,49 +10,55 @@ const TrainPage = () => {
 
     
        
-     <div style={{fontSize:"30px",display:"flex",justifyContent:"center"}}>Train Complaint Registration</div>
+     <div style={{fontSize:"30px",display:"flex",justifyContent:"center"}}>Flight Complaint Registration</div>
      <h3>Report Issues instantly</h3>
 
      <div style={{display:"flex",justifyContent:"space-evenly",borderColor:"black",border:"solid 1px",padding:"10px", borderRadius:'5px'}}>
         <div style={{margin:"1px"}}>  
-        <h3>Train Number</h3> 
+        <label>Bus Number</label> <br/>
         <input type="text" placeholder=""/>
         </div>
         <div>  
-        <h3>Date of Complain</h3> 
+        <label>From</label>  <br/>
+        <input type="text" placeholder=""/>
+        </div>
+         <div>  
+        <label>To</label>  <br/>
+        <input type="text" placeholder=""/>
+        </div>
+         <div>  
+        <label>Date </label>  <br/>
         <input type="text" placeholder=""/>
         </div>
      </div>
    
     <div style={{display:"flex",justifyContent:"space-evenly",borderColor:"black",border:"solid 1px",padding:"10px", borderRadius:'5px',marginTop:"5px"}}>
-        <div style={{margin:"1px"}}>  
-      <label>Coach No.</label> <br/>
-        <input type="text" placeholder=""/>
+    <div style={{margin:"1px"}}>  
+      <label>Bus Operator</label> <br/>
+      <select defaultValue="">
+        <option value="" disbled>Select Bus Type</option>
+        <option value="Government">Government</option>
+        <option value="Public">Public</option>
+      </select>
         </div>
         <div>  
         <label>Seat No.</label> <br/>
         <input type="text" placeholder=""/>
+        </div>
 
-        </div>
-           <div>  
-        
-          <div>
-          <label>Berth Type: </label><br />
-          <select value={berth} onChange={(e) => setBerth(e.target.value)}>
-            <option value="">Select</option>
-            <option>Lower Berth</option>
-            <option>Middle Berth</option>
-            <option>Upper Berth</option>
-            <option>Side Lower</option>
-            <option>Side Upper</option>
-          </select>
-        </div>
+      <div style={{margin:"1px"}}>  
+      <label>Seat Type</label> <br/>
+      <select defaultValue="">
+        <option value="" disbled>Select Seat Type</option>
+        <option value="Sleeper">Sleeper</option>
+        <option value="Seater">Seater</option>
+      </select>
         </div>
      </div>
 
      <div>
         <h2>Select your issue :</h2>
-        <TrainCards/>
+        <FlightCards/>
      </div>
 
      <div style={{padding:"10px"}}>
@@ -62,16 +68,15 @@ const TrainPage = () => {
       <h3>Complain Description</h3>
       <textarea placeholder="Describe your Complaint...." rows={4} style={{width:"98%",margin:'10px'}}/>
      </div>
- <div>
+  <div>
     <input type="tel" placeholder="Enter the Number"/>
     <input type="email" placeholder="Enter the Email"/>
   </div>
   <div >
-    <button style={{color:'white',backgroundColor:"blue",padding:"10px"}}>Submit</button>
-    </div>
+    <button style={{color:'white',backgroundColor:"blue",padding:"10px"}}>Submit</button></div>
 
    </div>
   )
 }
 
-export default TrainPage
+export default BusPage
