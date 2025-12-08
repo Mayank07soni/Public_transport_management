@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import FlightCards from './BusCards';
+import FlightCards from '../components/BusCards';
 
 const BusPage= () => {
     const[berth,setBerth]=useState("");

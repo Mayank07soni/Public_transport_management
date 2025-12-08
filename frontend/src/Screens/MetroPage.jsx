@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import MetroCards from './MetroCard';
+import MetroCards from '../components/MetroCard';
 
 const BusPage= () => {
     const[MetroLine, setMetroLine]=useState("");

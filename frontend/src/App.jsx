@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import MainPage from "./components/MainPage.jsx";
-import TrainPage from "./components/TrainPage.jsx";
-import BusPage from "./components/BusPage.jsx";
-import MetroPage from "./components/MetroPage.jsx";
-import FlightPage from "./components/FlightPage.jsx";
+import MainPage from "./Screens/MainPage.jsx";
+import TrainPage from "./Screens/TrainPage.jsx";
+import BusPage from "./Screens/BusPage.jsx";
+import MetroPage from "./Screens/MetroPage.jsx";
+import FlightPage from "./Screens/FlightPage.jsx";
 function App() {
   return (
     <BrowserRouter>
