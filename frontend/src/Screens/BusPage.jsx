@@ -1,14 +1,10 @@
 import React, { useState } from 'react'
-import TrainCards from '../components/TrainCards';
-import Header from '../components/header';
+import BusCards from '../components/BusCards';
 
-
-const TrainPage= () => {
+const BusPage= () => {
     const[berth,setBerth]=useState("");
   return (
     <div>
-      <Header/>
-     <div style={{fontSize:"30px",display:"flex",justifyContent:"center"}}>Train Complaint Registration</div>
 
      <div style={{backgroundColor:"grey",padding:"10px"}}>Navbar</div>
 
@@ -19,7 +15,7 @@ const TrainPage= () => {
 
      <div style={{display:"flex",justifyContent:"space-evenly",borderColor:"black",border:"solid 1px",padding:"10px", borderRadius:'5px'}}>
         <div style={{margin:"1px"}}>  
-        <label>Train Number</label> <br/>
+        <label>Bus Number</label> <br/>
         <input type="text" placeholder=""/>
         </div>
         <div>  
@@ -38,31 +34,31 @@ const TrainPage= () => {
    
     <div style={{display:"flex",justifyContent:"space-evenly",borderColor:"black",border:"solid 1px",padding:"10px", borderRadius:'5px',marginTop:"5px"}}>
     <div style={{margin:"1px"}}>  
-      <label>Coach No.</label> <br/>
-      <input type="text" placeholder=""/>
+      <label>Bus Operator</label> <br/>
+      <select defaultValue="">
+        <option value="" disbled>Select Bus Type</option>
+        <option value="Government">Government</option>
+        <option value="Public">Public</option>
+      </select>
         </div>
         <div>  
         <label>Seat No.</label> <br/>
-        <input type="number" placeholder=""/>
+        <input type="text" placeholder=""/>
         </div>
 
-
       <div style={{margin:"1px"}}>  
-      <label>Berth Type</label> <br/>
-      <select value={berth} onChange={(e)=>setBerth(e.target.value)}>
-        <option value="" disabled>Select Seat Type</option>
-        <option value="Lower">Lower</option>
-        <option value="Middle">Middle</option>
-        <option value="Upper">Upper</option>
-        <option value="SideLower">Side Lower</option>
-        <option value="Sideupper">Side Upper</option>
+      <label>Seat Type</label> <br/>
+      <select defaultValue="">
+        <option value="" disbled>Select Seat Type</option>
+        <option value="Sleeper">Sleeper</option>
+        <option value="Seater">Seater</option>
       </select>
         </div>
      </div>
 
      <div>
         <h2>Select your issue :</h2>
-        <TrainCards/>
+        <BusCards/>
      </div>
 
      <div style={{padding:"10px"}}>
@@ -84,4 +80,4 @@ const TrainPage= () => {
   )
 }
 
-export default TrainPage
+export default BusPage
